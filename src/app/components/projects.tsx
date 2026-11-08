@@ -35,6 +35,8 @@ export default function Projects() {
                 <a href="https://news-six-rose.vercel.app" target="_blank" rel="noopener noreferrer" className="border px-2 text-[10px] rounded-sm">Live Demo</a>
               </div>
             </div>
+
+            <Link className="mt-5 font-serif italic underline underline-offset-2 hover:text-blue-400" href={"/projects-db"}><p>View more projects ↗</p></Link>
           </div>
         </div>
     </section>    
