@@ -1,5 +1,6 @@
 import { getProjects } from "@/prisma-db"
 import { ProjectDetail } from "./project-detail";
+export const dynamic = "force-dynamic"
 export type Project = {
     id: number;
     title: string;
