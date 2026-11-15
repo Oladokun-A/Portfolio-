@@ -20,7 +20,7 @@ export default function EditProjectForm({project}: {project: Project}) {
             <div style={{marginBottom: "20px"}}>
                 <label style={{ borderRadius: "8px", }}>
                 <p>Title</p>
-                <input type="text" defaultValue={project.title} name="title" className="border rounded-lg  p-2 " />
+                <input type="text" defaultValue={project.title} name="title" className="border rounded-lg  p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 " />
                 </label>
                 {state.errors.title && <p style={{color: "red"}}>{state.errors.title}</p>}
             </div>
@@ -28,15 +28,15 @@ export default function EditProjectForm({project}: {project: Project}) {
             <div style={{marginBottom: "20px"}}>
             <label style={{ borderRadius: "8px", }}>
                 <p>Demo Url</p>
-                <input type="url" defaultValue={project.demoUrl ?? ""} name="DemoUrl" className="border rounded-lg  p-2 "/>
-            </label>
+                <input type="url" defaultValue={project.demoUrl ?? ""} name="DemoUrl" className="border rounded-lg  p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 "/>
+            </label>    
             {state.errors.demoUrl && <p style={{color: "red"}}>{state.errors.demoUrl}</p>}
             </div>
 
             <div style={{marginBottom: "20px"}}>
             <label style={{ borderRadius: "8px", }}>
                 <p>Description</p>
-                <input type="text" defaultValue={project.description} name="description" className="border rounded-lg  p-2"/>
+                <input type="text" defaultValue={project.description} name="description" className="border rounded-lg  p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
             </label>
             {state.errors.description && <p style={{color: "red"}}>{state.errors.description}</p>}
             </div>

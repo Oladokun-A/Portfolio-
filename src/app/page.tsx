@@ -4,10 +4,18 @@ import Skill from './components/skills'
 import Projects from './components/projects'
 import Contact from './components/contact'
 import Hero from './components/hero'
+import { SignInButton, SignOutButton, Show} from "@clerk/nextjs";
 export default function Home() {
   return (
     <main className="flex flex-col items-center px-20 text-[#FAF9F6] bg-[#cabc8f] lg:px-80 sm:px-20 dark:bg-[#10172a] dark:text-[#3065f8] font-sans text-[14px]">
       <Navbar />
+      <Show when="signed-in">
+        <SignOutButton ></SignOutButton>
+      </Show>
+      <Show when="signed-out">
+        <SignInButton mode="modal" ></SignInButton> 
+      </Show>
+      
       <Hero />
       <About />
       <Skill/>

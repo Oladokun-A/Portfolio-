@@ -10,6 +10,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@clerk/nextjs": "^7.9.26",
     "@prisma/adapter-better-sqlite3": "^7.10.1",
     "@prisma/adapter-pg": "^7.10.1",
     "@prisma/client": "^5.22.0",
