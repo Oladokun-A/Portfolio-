@@ -11,9 +11,9 @@ export default async function ProjectsDBLayout(
         redirect ("/sign-in")
     }
     
-    const isAdmin = await checkRole("admin") || await checkRole("moderator")
-    if(!isAdmin){
-        redirect("/sign-in")
-    }
+    //const isAdmin = await checkRole("admin") || await checkRole("moderator")
+    //if(!isAdmin){
+    //    redirect("/")
+    //}
     return <>{children}</>
 }

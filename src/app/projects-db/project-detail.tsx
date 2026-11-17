@@ -52,11 +52,11 @@ export const ProjectDetail =  ({projects} : {projects: Project[]}) => {
                     </li>
                 ))}
             </ul>
-            {( isAdmin || isModerator) && (
+
                 <Link href="/projects-db-create" className="border p-2 py-1 rounded-md text-blue-500 hover:text-blue-700 hover:cursor-pointer">
                     Add new project
                 </Link>
-            )}
+  
         </div>
         </div>
     )
