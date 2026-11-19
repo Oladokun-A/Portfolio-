@@ -3,7 +3,7 @@ import {useUser} from "@clerk/nextjs"
 import { useOptimistic } from "react";
 import { removeProject } from "@/actions/products"
 import Link from "next/link";
-
+import { SignInButton, SignOutButton, Show} from "@clerk/nextjs";
 export type Project = {
     id: number;
     title: string;
@@ -52,10 +52,26 @@ export const ProjectDetail =  ({projects} : {projects: Project[]}) => {
                     </li>
                 ))}
             </ul>
-
+            <div className="flex justify-around mt-5">
                 <Link href="/projects-db-create" className="border p-2 py-1 rounded-md text-blue-500 hover:text-blue-700 hover:cursor-pointer">
                     Add new project
                 </Link>
+                <Show when="signed-in">
+                    <SignOutButton >
+                        <button className="border p-2 py-1 rounded-md text-blue-500 hover:text-blue-700 hover:cursor-pointer">
+                            Sign Out
+                        </button>
+                    </SignOutButton>
+                </Show>
+                <Show when="signed-out">
+                    <SignInButton mode="modal" >
+                        <button className="border p-2 py-1 rounded-md text-blue-500 hover:text-blue-700 hover:cursor-pointer">
+                            Sign in as Admin
+                        </button> 
+                    </SignInButton> 
+                </Show>
+            </div>
+                
   
         </div>
         </div>
